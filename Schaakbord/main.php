@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="border: 0px; padding: 0px; margin: 0px;">
+<body style="border: 0px; padding: 0px; margin: 0px; spacing: 0px;">
     <?php
         $iterations = 8;
         for ($x = 0; $x < $iterations; $x++) {
