@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h3 style="margin: 0%">Omtrek en Oppervlakte van een cirkel berekenen: </h3>
+    <h3 style="margin: 0%">Afstanden ofzo: </h3>
     <form method="POST">
         Waarde: <input type="number" name="Waarde"><br>
         Grootheid: <select name="grootheid">
@@ -34,41 +34,65 @@
     <?php
         $Waarde = $_POST["Waarde"];
         $grootheid =  $_POST["grootheid"];
-        $grootheidId = 0;
+        $grootheidId = 1;
         switch($grootheid){
             case "Kilometer":
-                $grootheidId = 0;
-            case "Hectometer":
                 $grootheidId = 1;
-            case "Decameter":
+                break;
+            case "Hectometer":
                 $grootheidId = 2;
-            case "meter":
+                break;
+            case "Decameter":
                 $grootheidId = 3;
-            case "Decimeter":
+                break;
+            case "Meter":
                 $grootheidId = 4;
-            case "Centimeter":
+                break;
+            case "Decimeter":
                 $grootheidId = 5;
-            case "Milimeter":
+                break;
+            case "Centimeter":
                 $grootheidId = 6;
+                break;
+            case "Milimeter":
+                $grootheidId = 7;
+                break;
         }
 
         $gewenst =  $_POST["gewenst"];
-        $gewenstId = 0;
+        $gewenstId = 1;
         switch($gewenst){
             case "Kilometer":
-                $gewenstId = 0;
-            case "Hectometer":
                 $gewenstId = 1;
-            case "Decameter":
+                break;
+            case "Hectometer":
                 $gewenstId = 2;
-            case "meter":
+                break;
+            case "Decameter":
                 $gewenstId = 3;
-            case "Decimeter":
+                break;
+            case "Meter":
                 $gewenstId = 4;
-            case "Centimeter":
+                break;
+            case "Decimeter":
                 $gewenstId = 5;
-            case "Milimeter":
+                break;
+            case "Centimeter":
                 $gewenstId = 6;
+                break;
+            case "Milimeter":
+                $gewenstId = 7;
+                break;
+        }
+        if($grootheidId > $gewenstId){
+            $diff = $gewenstId - $grootheidId;
+            $aantal2 = (int)$Waarde / 10 **  $diff;
+            echo $aantal2 . '<br>';
+        }
+        if($grootheidId < $gewenstId){
+            $diff = $grootheidId - $gewenstId;
+            $aantal2 = (int)$Waarde * 10 **  $diff;
+            echo $aantal2 . '<br>';
         }
     ?>
 </body>

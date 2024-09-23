@@ -7,7 +7,7 @@
 </head>
 <body style="border: 0px; padding: 0px; margin: 0px;">
     <?php
-        $iterations = 1000;
+        $iterations = 8;
         for ($x = 0; $x < $iterations; $x++) {
             // // echo $x;
             // if($x & 1 ){
