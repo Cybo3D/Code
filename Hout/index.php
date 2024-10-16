@@ -1,8 +1,39 @@
 <?php
-$BerkenPrijs = "€ 10";
-$BeukenPrijs = "€ 7";
-$EikenPrijs = "€ 8";
-$EssenPrijs = "€ 9";
+$BerkenPrijs = "10";
+$BeukenPrijs = "7";
+$EikenPrijs = "8";
+$EssenPrijs = "9";
+
+if (!$_POST) {
+   // echo "u moet wat invoeren voordat u submit";
+} else {
+    $TypeHout = $_POST["Hout"] ?? "";
+    $Vorm = $_POST["Vorm"] ?? "";
+
+    $Width = $_POST["Width"] ?? 0;
+    $Length = $_POST["Length"] ?? 0;
+    $Radius = $_POST["Radius"] ?? 0;
+    $Side1 = $_POST["Side1"] ?? 0;
+    $Side2 = $_POST["Side2"] ?? 0;
+
+    $Output = 0;
+
+    if ($Vorm == "Vierkant") {
+        $Output = $Width * $Length;
+    } elseif ($Vorm == "Cirkel") {
+        $Output = pi() * $Radius * $Radius;  // Corrected formula for circle area
+    } elseif ($Vorm == "Driehoek") {
+        $Output = ($Side1 * $Side2) / 2;
+    }
+
+    if ($Output > 0 && $TypeHout) {
+        if ($TypeHout == "Berken") $Output = floatval($Output) * floatval($BerkenPrijs);
+        if ($TypeHout == "Beuken") $Output = floatval($Output) * floatval($BeukenPrijs);
+        if ($TypeHout == "Eiken") $Output = floatval($Output) * floatval($EikenPrijs);
+        if ($TypeHout == "Essen") $Output = floatval($Output) * floatval($EssenPrijs);
+        $_POST["Output"] = $Output;
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +44,7 @@ $EssenPrijs = "€ 9";
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form method="post">
         <h2 style="margin:0px;">Type Hout: </h2>
         <br>
 
@@ -36,11 +67,14 @@ $EssenPrijs = "€ 9";
         <input type="radio" name="Vorm" value="Driehoek"> Driehoek<br>
         &emsp; Zijde 1 <input type="number" name="Side1"> <br>
         &emsp; Zijde 2 <input type="number" name="Side2"> <br>
-        &emsp; Zijde 3 <input type="number" name="Side3"> <br>
 
         <br>
 
         <input type="submit">
+
+        <br>
+
+        <h2><?= $_POST["Output"] ?? ""; ?></h2>
     </form>
 </body>
 </html>
