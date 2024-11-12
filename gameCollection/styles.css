@@ -1,0 +1,62 @@
+@font-face {
+    font-family: agency;
+    src: url(AGENCYB.TTF);
+}
+body{
+    background-color: #070F2B;
+    color: #9290C3;
+    font-family: agency;
+    text-align: center;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    font-size: 5em;
+    margin: 0px;
+}
+.games{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+a{
+    color: #9290C3;
+    text-decoration: none;
+}
+.game{
+    width: 20em;
+    background-color: #1B1A55;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 0.5em;
+}
+.game img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: .75em;
+}
+h2{
+    margin: 0.1em;
+    font-size: 2em;
+}
+.content{
+    display: grid;
+    grid-template-columns: ;
+    justify-content: center;
+    text-align: center;
+}
+.banner{
+    height: 50%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    mask-image: linear-gradient(#000, rgba(0,0,0,0));
+}
+.description{
+    width: 50%;
+    margin-left: 25%;
+}

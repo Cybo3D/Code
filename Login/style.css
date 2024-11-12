@@ -1,0 +1,49 @@
+:root {
+    --dark-bg-color: #141f26;
+    --primary-bg-color: #243642;
+    --secondary-color: #387478;
+    --tertiary-color: #629584;
+    --main-text-color: #E2F1E7;
+}  
+*{
+    background-color: var(--primary-bg-color);
+    color: var(--main-text-color);
+    font-family: 'Papyrus', fantasy;
+}
+h1,h2,h3,h4{
+    margin: 0px;
+    text-align: center;
+}
+body{
+    display: flex; 
+    justify-content: center;
+}
+input, button{
+    border-radius: 1em;
+    padding: .5em;
+    margin: .25em;
+    border-color: var(--secondary-color);
+    border-style: solid;
+    filter: drop-shadow(10px 5px 4px var(--dark-bg-color));
+    background-color: var(--dark-bg-color);
+}
+button{
+    background-color: var(--secondary-color);
+}
+.Form{
+    z-index: 1;
+}
+.Type-LoggedOut, .Type-LoggedIn{
+    display: flex;
+    justify-content: center ;
+    text-align: center;
+}
+.Info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+.InfoText{
+
+}

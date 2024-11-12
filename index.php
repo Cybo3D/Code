@@ -23,7 +23,7 @@
             $mainPhp = scandir("./" . $mainDir[$x])[2];
 
             for ($y = 2; $y < count($dir); $y++){
-                if($dir[$y] == "index.php" || $dir[$y] == "Index.php" || $dir[$y] == "main.php" || $dir[$y] == "Main.php"){
+                if($dir[$y] == "index.php" || $dir[$y] == "Index.php" || $dir[$y] == "main.php" || $dir[$y] == "Main.php" || $dir[$y] == "Index.html" || $dir[$y] == "index.html" ){
                     $mainPhp = $dir[$y];
                 }
             }
