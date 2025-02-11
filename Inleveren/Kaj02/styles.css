@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    background-color: yellowgreen;
+}
+.topnav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100px;
+    background-color: darkgreen;
+}
+#title{
+    text-align: center; 
+    color: white;
+    width: 100%;
+}
+img{
+    width: 25%;
+    height: 100%;
+    object-fit: contain;
+    background-color: yellow;
+}
+.content{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 10px;
+}
+.info{
+    width: 99%;
+    height: 80vh;
+    background-color: white;
+}
+#left{
+    width: 90%;
+}
+#middle{
+    width: 97%;
+}
+#right{
+    width: 500px;
+}
+.alert{
+    color: darkred;
+    font-weight: bolder;
+}
+h2, p, form{
+    margin: 20px;
+}
+.result{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.result img{
+    width: 200px;
+    height: 75px;
+}

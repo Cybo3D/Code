@@ -55,6 +55,10 @@ if (isset($_GET["Game"])) {
 
 <body>
     <div class="container">
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="contact.php">Contact</a>
+    </div>
         <img class="banner" src="<?php echo $Banner?>">
         <div class="content">
             <h2 class="description"><?php echo $Description?></h2>

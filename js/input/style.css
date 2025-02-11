@@ -1,0 +1,13 @@
+.output{
+    width: 20%;
+    border: 2px solid black
+}
+form{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.age_counter{
+    display: flex;
+    flex-direction: row;
+}

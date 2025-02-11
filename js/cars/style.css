@@ -1,0 +1,18 @@
+*{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.output{
+    border-bottom: 2px solid black;
+    margin-top: .2em;
+    margin-bottom: .5em;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+}
+.input{
+    display: flex;
+    flex-direction: row;
+}

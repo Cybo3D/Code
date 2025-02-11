@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> 
+</head>
+<body>
+    <h2>Output: </h2>
+    <div class="output">
+        <p id="output"></p>
+    </div>
+    <form name="age_calc_form" onsubmit="return validateForm()" method="post">
+        <label for="name">Voornaam: </label>
+        <input type="input" name="name">
+
+        <label for="last_name">Achternaam: </label>
+        <input type="input" name="last_name">
+
+        <label for="age">Leeftijd: </label>
+        <input type="number" name="age">
+
+        <div class="age_counter">
+            <label for="age_counter">over: </label>
+            <input class="age_counter" type="number" name="age_counter">
+            <label for="age_counter">jaar...</label>
+        </div>
+        <button type="submit">plaats tekst</button>
+    </form>
+</body>
+</html>

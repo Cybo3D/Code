@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .bottom-bar {
     background-color: var(--SecondColor);
-    position: absolute;
+    /* position: absolute; */
     height: var(--BarHeight);
     width: 100%;
     bottom: 0px;
@@ -48,4 +48,19 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .credits{
     margin-left: var(--PaddingLeft);
+}
+.projects{
+    display: grid;
+    width: 75%;
+    margin-left: 12.5%;
+    grid-template-columns: repeat(3, 1fr);
+}
+.project{
+    /* display: flex; */
+    padding: 25px;
+}
+.project img{
+    /* width: 250px; */
+    width: 100%;
+    border-radius: 1vw;
 }

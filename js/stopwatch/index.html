@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    <button onclick="fStart()">start</button>
+    <button onclick="fStop()">stop</button>
+    <button onclick="fReset()">reset</button>
+
+    <script>
+        let msSec = 0;
+        let sec = 0;
+        let min = 0;
+        let mijnInterval;
+
+        function fStart() {
+            mijnInterval = setInterval(msSecTeller, 10);
+        }
+        function fStop() {
+            clearInterval(mijnInterval);
+        }
+        function fReset() {
+            msSec = 0;
+            sec = 0;
+            min = 0;
+            fStop();
+            setDisplay();
+        }
+
+        function msSecTeller() {
+            msSec = msSec + 1;
+            if (msSec >= 100) {
+                msSec = 0;
+                sec += 1;
+            }
+            if (sec >= 60) {
+                sec = 0;
+                min += 1;
+            }
+            setDisplay();
+        }
+        function setDisplay() {
+            let minutes = "";
+            let seconds = "";
+            let miliSeconds = "";
+
+            if(min < 10){
+                minutes = `0${min}`
+            }else{
+                minutes = `${min}`
+            }
+
+            if(sec < 10){
+                seconds = `0${sec}`
+            }else{
+                seconds = `${sec}`
+            }
+
+            if(msSec < 10){
+                miliSeconds = `0${msSec}`
+            }else{
+                miliSeconds = `${msSec}`
+            }
+
+            document.getElementById("display").innerHTML = `${minutes} : ${seconds} : ${miliSeconds}`;
+        }
+
+        setDisplay();
+    </script>
+</body>
+
+</html>

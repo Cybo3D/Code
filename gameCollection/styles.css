@@ -1,10 +1,17 @@
+:root {
+    --BgColor: #070F2B;
+    --SecondColor: #1B1A55;
+    --ThirdColor: #535C91;
+    --TextColor: #9290C3;
+}
+
 @font-face {
     font-family: agency;
     src: url(AGENCYB.TTF);
 }
 body{
-    background-color: #070F2B;
-    color: #9290C3;
+    background-color: var(--BgColor);
+    color: var(--TextColor);
     font-family: agency;
     text-align: center;
     margin: 0;
@@ -17,18 +24,33 @@ h1{
     font-size: 5em;
     margin: 0px;
 }
+a{
+    color: var(--TextColor);
+    text-decoration: none;
+}
+.topnav{
+    background-color: var(--ThirdColor);
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    mask-image: linear-gradient(to left, rgba(0,0,0,0), #000, rgba(0,0,0,0));
+}
+.topnav a{
+    background-color: var(--SecondColor);
+    font-size: 2em;
+    width: 3em;
+    border-radius: .2em;
+}
 .games{
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
 }
-a{
-    color: #9290C3;
-    text-decoration: none;
-}
 .game{
     width: 20em;
-    background-color: #1B1A55;
+    background-color: var(--SecondColor);
     border-radius: 1em;
     margin: 1em;
     padding: 0.5em;
@@ -45,7 +67,7 @@ h2{
 }
 .content{
     display: grid;
-    grid-template-columns: ;
+    grid-template-columns: auto auto auto;
     justify-content: center;
     text-align: center;
 }
@@ -59,4 +81,31 @@ h2{
 .description{
     width: 50%;
     margin-left: 25%;
+}
+label{
+    font-size: 2em;
+}
+input, textarea{
+    height: 2em;
+    width: 10em;
+    
+    background-color: var(--ThirdColor);
+    font-family: agency;
+    color: var(--BgColor);
+    border-radius: .2em;
+    border-color: var(--TextColor);
+    border-width: .2em;
+}
+textarea{
+    width: 15em;
+    height: 10em;
+}
+button{
+    background-color: var(--ThirdColor);
+    font-size: 1.5em;
+    font-family: agency;
+    color: var(--BgColor);
+    border-radius: .2em;
+    border-color: var(--TextColor);
+    border-width: .2em;
 }

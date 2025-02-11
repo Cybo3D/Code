@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .row {
+            margin: 5px 0;
+        }
+        label {
+            display:inline-block;
+            width: 100px;
+        }
+        input {
+            flex: 1;
+            margin-left: 10px;
+        }
+        #address {
+            width: 355px;
+        }
+        #tv {
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Formulier</h1>
+    <form>
+        <div class="row">
+            <label for="name">Naam:</label>
+            <input type="text" name="name" id="name">
+            <input type="text" name="tv" id="tv">
+            <input type="text" name="last_name" id="last_name">
+        </div>
+        <div class="row">
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address">
+        </div>
+        <div class="row">
+            <label for="pc">PC plaats:</label>
+            <input type="text" name="postcode" id="postcode">
+            <input type="text" name="plaats" id="plaats">
+        </div>
+        <div class="row">
+            <label for="telephone">Telefoon:</label>
+            <input type="text" name="telephone" id="telephone">
+        </div>
+        <div class="row">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div class="row">
+            <label for="gender">Geslacht:</label>
+            <input type="radio" id="man" name="gender" value="Man"> <label for="gender">Geslacht</label><br>
+            <input type="radio" id="woman" name="gender" value="Woman">
+        </div>
+    </form>
+</body>
+</html>

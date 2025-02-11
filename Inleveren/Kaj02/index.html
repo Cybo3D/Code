@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="topnav">
+            <img src="kerstboom.png">
+            <h1 id="title">Kerstborrel</h1>
+            <img src="sneeuw.png">
+        </div>
+        <div class="content">
+            <div class="info" id="left">
+                <h2>Wanneer</h2>
+                <p>vr 20 december 2024 16:00 uur - 20:00 uur</p>
+
+                <h2>Waar</h2>
+                <p>Deltion college</p>
+                <p>Gebouw groen</p>
+                <p>Lokaal 2.099</p>
+                <p>Mozartlaan 15</p>
+                <p>8031 AA Zwolle</p>
+            </div>
+            <div class="info" id="middle">
+                <h2>SD kerstborrel</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam atque beatae voluptatum optio harum saepe necessitatibus, ex dolore perferendis voluptatem amet, assumenda natus corporis labore repellat ratione dicta fugit repellendus!</p>
+                <p class="alert">Ten slotte raden we u met klem af, om hierin te komen omdat dit een fake-bericht is!!</p>
+            </div>
+            <div class="info" id="right">
+                <h2>aanmelden voor borrel</h2>
+                <form action="result.php">
+                    <div>
+                        <label for="name">naam: </label>
+                        <input type="text" id="name" name="name" placeholder="voor en achternaam" />
+                    </div>
+                    <div>
+                        <label for="email">email: </label>
+                        <input type="email" id="email" name="email" placeholder="" />
+                    </div>
+                    <div>
+                        <label for="vegetarian">vegetarisch: </label><br>
+                        <input type="radio" id="vegetarian" name="vegetarian" value="yes" /> ja<br>
+                        <input type="radio" id="vegetarian" name="vegetarian" value="no" /> nee
+                    </div>
+                    <div>
+                        <label for="vegetables">groenten: </label><br>
+                        <input type="radio" id="vegetables" name="vegetables" value="boontjes" /> boontjes<br>
+                        <input type="radio" id="vegetables" name="vegetables" value="sla" /> sla <br>
+                        <input type="radio" id="vegetables" name="vegetables" value="wortels" /> wortels<br>
+                        <input type="radio" id="vegetables" name="vegetables" value="bloomkool" /> bloomkool
+                    </div>
+                    <button type="submit">meld mij aan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

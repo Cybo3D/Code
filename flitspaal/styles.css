@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+}
+.container{
+    display: flex;
+}
+
+table, th, td {
+    padding: 0.25em;
+    margin: 1em;
+    margin-top: 0;
+    border: 2px groove;
+    border-collapse: collapse;
+    height: 100%;
+}
+
+.table{
+    height: 100%;
+}
+h1{
+    text-align: center;
+}
