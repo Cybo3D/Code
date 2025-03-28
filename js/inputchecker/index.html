@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Input Checker</title>
     <style>
         form {
             display: flex;
             flex-direction: column;
         }
+
         .row {
             margin: 5px 0;
         }
+
         label {
-            display:inline-block;
+            display: inline-block;
             width: 100px;
         }
-        input {
+
+        input,
+        select {
             flex: 1;
             margin-left: 10px;
         }
+
         #address {
             width: 355px;
         }
+
         #tv {
             width: 20px;
         }
     </style>
 </head>
+
 <body>
     <h1>Test Formulier</h1>
     <form>
         <div class="row">
             <label for="name">Naam:</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" onblur="blurTest()" onkeyup="KeyUpTest()">
             <input type="text" name="tv" id="tv">
             <input type="text" name="last_name" id="last_name">
         </div>
@@ -56,9 +64,63 @@
         </div>
         <div class="row">
             <label for="gender">Geslacht:</label>
-            <input type="radio" id="man" name="gender" value="Man"> <label for="gender">Geslacht</label><br>
-            <input type="radio" id="woman" name="gender" value="Woman">
+            <input type="radio" id="man" name="gender" value="Man"> <label for="gender">Man</label>
+            <input type="radio" id="woman" name="gender" value="Woman"> <label for="gender">Vrouw</label>
+        </div>
+        <div class="row">
+            <label for="car">Auto:</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Chevrolet</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="date-of-birth">Geboorte datum:</label>
+            <input type="datetime" name="date-of-birth" id="date-of-birth">
+        </div>
+        <div class="row">
+            <button type="button" onclick="submitTest()">verstuur</button>
         </div>
     </form>
+</body>
+
+</html>
+<script>
+    if (document.getElementById('name').value == "") {
+        console.log("test")
+    }
+    function submitTest(){
+        console.log("info subbmitted")
+    }
+    function blurTest() {
+        console.log("blur");
+    }
+    function KeyUpTest(){
+        console.log("keyup")
+    }
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Looping an Array</h2>
+<p id="demo"></p>
+
+<script>
+const myJSON = '{"name":"John", "age":30, "cars":["Ford", "BMW", "Fiat"]}';
+const myObj = JSON.parse(myJSON);
+
+let text = "";
+for (let i in myObj.cars) {
+  text += myObj.cars[i] + ", ";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
 </body>
 </html>
